@@ -8,7 +8,7 @@ USER root
 
 RUN set -ex && \
     microdnf -y install python3-devel python3 python3-pip && \
-    pip3 install --upgrade pip
+    pip3 install --upgrade pip && \
     pip3 install --index-url https://pypi.org/simple --no-cache-dir orjson && \
     microdnf -y clean all && \
     rm -rf /var/cache/yum /tmp 
