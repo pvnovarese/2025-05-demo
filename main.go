@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-import "github.com/mailru/easyjson/"
+import "github.com/mailru/easyjson"
 
 func helloworld() string {
 	return "Hello World!!"
