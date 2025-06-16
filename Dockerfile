@@ -8,7 +8,9 @@ USER root
 
 COPY requirements.txt go.mod /
 RUN set -ex && \
-    microdnf -y install python3-devel python3 python3-pip podman skopeo && \
+    microdnf -y install python3-devel python3 python3-pip go && \
+    go get -u github.com/json-iterator/go@latest && \
+    go get -u github.com/json-iterator/go@latest && \
     pip3 install --upgrade pip && \
     pip3 install --index-url https://pypi.org/simple --no-cache-dir orjson && \
     microdnf -y clean all && \
