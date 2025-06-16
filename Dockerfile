@@ -6,6 +6,7 @@ LABEL org.opencontainers.image.description="Simple image to test some SCA type t
 
 USER root 
 
+COPY requirements.txt go.mod /
 RUN set -ex && \
     microdnf -y install python3-devel python3 python3-pip && \
     pip3 install --upgrade pip && \
